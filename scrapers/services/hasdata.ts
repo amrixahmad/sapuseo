@@ -18,7 +18,7 @@ const hasdata:ScraperSettings = {
       };
    },
    scrapeURL: (keyword, settings) => {
-      const country = keyword.country || 'US';
+      const country = keyword.country || 'MY';
       const countryName = countries[country][0];
       const location = keyword.city && countryName ? `&location=${encodeURIComponent(`${keyword.city},${countryName}`)}` : '';
       return `https://api.scrape-it.cloud/scrape/google/serp?q=${encodeURIComponent(keyword.keyword)}${location}&num=100&gl=${country.toLowerCase()}&deviceType=${keyword.device}`;

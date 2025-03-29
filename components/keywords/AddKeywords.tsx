@@ -24,7 +24,7 @@ type KeywordsInput = {
 
 const AddKeywords = ({ closeModal, domain, keywords, scraperName = '', allowsCity = false }: AddKeywordsProps) => {
    const inputRef = useRef(null);
-   const defCountry = localStorage.getItem('default_country') || 'US';
+   const defCountry = localStorage.getItem('default_country') || 'MY';
 
    const [error, setError] = useState<string>('');
    const [showTagSuggestions, setShowTagSuggestions] = useState(false);

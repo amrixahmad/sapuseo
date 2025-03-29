@@ -3,7 +3,7 @@ const scrapingRobot:ScraperSettings = {
    name: 'Scraping Robot',
    website: 'scrapingrobot.com',
    scrapeURL: (keyword, settings, countryData) => {
-      const country = keyword.country || 'US';
+      const country = keyword.country || 'MY';
       const device = keyword.device === 'mobile' ? '&mobile=true' : '';
       const lang = countryData[country][2];
       const url = encodeURI(`https://www.google.com/search?num=100&hl=${lang}&q=${keyword.keyword}`);

@@ -13,7 +13,7 @@ const spaceSerp:ScraperSettings = {
    website: 'spaceserp.com',
    allowsCity: true,
    scrapeURL: (keyword, settings, countryData) => {
-      const country = keyword.country || 'US';
+      const country = keyword.country || 'MY';
       const countryName = countries[country][0];
       const location = keyword.city ? `&location=${encodeURIComponent(`${keyword.city},${countryName}`)}` : '';
       const device = keyword.device === 'mobile' ? '&device=mobile' : '';

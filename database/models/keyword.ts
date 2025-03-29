@@ -16,7 +16,7 @@ class Keyword extends Model {
    @Column({ type: DataType.STRING, allowNull: true, defaultValue: 'desktop' })
    device!: string;
 
-   @Column({ type: DataType.STRING, allowNull: true, defaultValue: 'US' })
+   @Column({ type: DataType.STRING, allowNull: true, defaultValue: 'MY' })
    country!: string;
 
    @Column({ type: DataType.STRING, allowNull: true, defaultValue: '' })

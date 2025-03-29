@@ -18,7 +18,7 @@ const serpapi:ScraperSettings = {
       };
    },
    scrapeURL: (keyword, settings) => {
-      const countryName = countries[keyword.country || 'US'][0];
+      const countryName = countries[keyword.country || 'MY'][0];
       const location = keyword.city && keyword.country ? `&location=${encodeURIComponent(`${keyword.city},${countryName}`)}` : '';
       return `https://serpapi.com/search?q=${encodeURIComponent(keyword.keyword)}&num=100&gl=${keyword.country}&device=${keyword.device}${location}&api_key=${settings.scaping_api}`;
    },

@@ -49,7 +49,7 @@ const InsightPage: NextPage = () => {
       <div className="Domain ">
          {activDomain && activDomain.domain
          && <Head>
-               <title>{`${activDomain.domain} - SerpBear` } </title>
+               <title>{`${activDomain.domain} - Sapuseo` } </title>
             </Head>
          }
          <TopBar showSettings={() => setShowSettings(true)} showAddModal={() => setShowAddDomain(true)} />

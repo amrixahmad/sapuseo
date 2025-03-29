@@ -52,7 +52,7 @@ const getKeywordIdeas = async (req: NextApiRequest, res: NextApiResponse<keyword
 
 const updateKeywordIdeas = async (req: NextApiRequest, res: NextApiResponse<keywordsIdeasUpdateResp>) => {
    const errMsg = 'Error Fetching Keywords. Please try again!';
-   const { keywords = [], country = 'US', language = '1000', domain = '', seedSCKeywords, seedCurrentKeywords, seedType } = req.body;
+   const { keywords = [], country = 'MY', language = '1000', domain = '', seedSCKeywords, seedCurrentKeywords, seedType } = req.body;
 
    if (!country || !language) {
       return res.status(400).json({ keywords: [], error: 'Error Fetching Keywords. Please Provide a Country and Language' });

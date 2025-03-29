@@ -10,7 +10,7 @@ const serply:ScraperSettings = {
    name: 'Serply',
    website: 'serply.io',
    headers: (keyword, settings) => {
-      const country = scraperCountries.includes(keyword.country.toUpperCase()) ? keyword.country : 'US';
+      const country = scraperCountries.includes(keyword.country.toUpperCase()) ? keyword.country : 'MY';
       return {
          'Content-Type': 'application/json',
          'X-User-Agent': keyword.device === 'mobile' ? 'mobile' : 'desktop',
@@ -19,7 +19,7 @@ const serply:ScraperSettings = {
       };
    },
    scrapeURL: (keyword) => {
-      const country = scraperCountries.includes(keyword.country.toUpperCase()) ? keyword.country : 'US';
+      const country = scraperCountries.includes(keyword.country.toUpperCase()) ? keyword.country : 'MY';
       return `https://api.serply.io/v1/search/q=${encodeURIComponent(keyword.keyword)}&num=100&hl=${country}`;
    },
    resultObjectKey: 'result',
